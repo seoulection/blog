@@ -105,3 +105,22 @@ a {
     color-scheme: dark;
   }
 }
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 50px;
+}
+
+main > h1,
+main section {
+  margin-bottom: 30px;
+}
+
+main section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
