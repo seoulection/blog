@@ -1,10 +1,21 @@
 import Link from 'next/link'
+import Layout from 'components/Layout'
 
-export default function AboutMe() {
+const ABOUT = [
+  'senior software engineer @ 8th light',
+  '49x17 fixed gear',
+  'mech keeb enthusiast'
+]
+
+export default function AboutMe(): JSX.Element {
   return (
-    <main>
-      <h1>about me</h1>
-      <Link href="/">back</Link>
-    </main>
+    <Layout>
+      <>
+        <h1>about me</h1>
+        {ABOUT.map(desc => (
+          <p key={desc}>{desc}</p>
+        ))}
+      </>
+    </Layout>
   )
 }
