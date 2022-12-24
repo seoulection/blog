@@ -1,0 +1,8 @@
+.about {
+  margin-bottom: 32px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}

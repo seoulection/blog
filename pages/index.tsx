@@ -1,10 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import styles from '../styles/Home.module.css'
+import About from '../components/About'
 
-const LINKEDIN = 'https://www.linkedin.com/in/brian-sung-bb08ba106/'
-
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
     <>
       <Head>
@@ -15,11 +13,9 @@ export default function Home() {
       </Head>
       <main>
         <h1>seoulection</h1>
+        <About />
         <section>
-          <Link href="/about">about</Link>
-          <a href={LINKEDIN} rel="noopener noreferrer" target="_blank">linkedin</a>
-        </section>
-        <section>
+          <Link href="/posts/react-page">react page</Link>
           <Link href="/posts/hello-world">hello world</Link>
         </section>
       </main>

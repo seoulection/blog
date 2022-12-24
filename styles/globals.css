@@ -42,8 +42,7 @@ main {
   margin: 50px;
 }
 
-main > h1,
-main section {
+main > h1 {
   margin-bottom: 30px;
 }
 
