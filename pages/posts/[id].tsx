@@ -2,15 +2,13 @@ import Head from 'next/head'
 import Layout from 'components/Layout'
 import { getAllPostIds, getPostData } from 'lib/posts'
 import styles from 'styles/Page.module.css'
+import { Data } from 'types/posts'
 
-type Data = {
-  id: string
-  contentHtml: string
-  date: string
-  title: string
+interface IPost {
+  postData: Data
 }
 
-export default function Post({ postData }: { postData: Data }) {
+export default function Post({ postData }: IPost) {
   return (
     <Layout>
       <>

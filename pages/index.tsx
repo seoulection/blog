@@ -2,18 +2,13 @@ import Head from 'next/head'
 import Link from 'next/link'
 import About from 'components/About'
 import { getSortedPostsData } from 'lib/posts'
+import { Data } from 'types/posts'
 
-interface Home {
-  postData: Data[]
+interface IHome {
+  postsData: Data[]
 }
 
-type Data = {
-  id: string
-  date: string
-  title: string
-}
-
-export default function Home({ postData }: Home): JSX.Element {
+export default function Home({ postsData }: IHome): JSX.Element {
   return (
     <>
       <Head>
@@ -26,7 +21,7 @@ export default function Home({ postData }: Home): JSX.Element {
         <h1>seoulection</h1>
         <About />
         <section>
-          {postData.map(({ id, date, title }: Data) => (
+          {postsData.map(({ id, date, title }: Data) => (
             <Link key={id} href={`/posts/${id}`}>{date} - {title}</Link>
           ))}
         </section>
@@ -36,11 +31,11 @@ export default function Home({ postData }: Home): JSX.Element {
 }
 
 export async function getStaticProps() {
-  const postData = await getSortedPostsData()
+  const postsData = await getSortedPostsData()
 
   return {
     props: {
-      postData
+      postsData
     }
   }
 }

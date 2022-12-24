@@ -3,12 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
-
-type Data = {
-  id: string
-  date: string
-  title: string
-}
+import { Data } from 'types/posts'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
