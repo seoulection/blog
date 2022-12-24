@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from 'styles/Page.module.css'
+import styles from 'styles/App.module.css'
 
 const GITHUB = 'https://www.github.com/seoulection'
 const INSTAGRAM = 'https://www.instagram.com/cloud__n9ne'

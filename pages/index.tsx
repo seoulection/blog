@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import About from 'components/About'
+import Posts from 'components/Posts'
 import { getSortedPostsData } from 'lib/posts'
 import { Data } from 'types/posts'
 
@@ -21,9 +22,7 @@ export default function Home({ postsData }: IHome): JSX.Element {
         <h1>seoulection</h1>
         <About />
         <section>
-          {postsData.map(({ id, date, title }: Data) => (
-            <Link key={id} href={`/posts/${id}`}>{date} - {title}</Link>
-          ))}
+          <Posts postsData={postsData} />
         </section>
       </main>
     </>

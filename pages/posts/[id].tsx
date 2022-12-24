@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Layout from 'components/Layout'
 import { getAllPostIds, getPostData } from 'lib/posts'
-import styles from 'styles/Page.module.css'
+import styles from 'styles/App.module.css'
 import { Data } from 'types/posts'
 
 interface IPost {
@@ -16,6 +16,7 @@ export default function Post({ postData }: IPost) {
           <title>{postData.title}</title>
         </Head>
         <h1>{postData.title}</h1>
+        <p className={styles.date}>{postData.date}</p>
         <div
           className={styles.content}
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}

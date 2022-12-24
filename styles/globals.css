@@ -25,6 +25,7 @@ body {
 
 a {
   color: inherit;
+  text-align: center;
   text-decoration: none;
 }
 
@@ -50,4 +51,9 @@ main section {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
 }
